@@ -1,6 +1,6 @@
 # AMERO CORE
 
--  Con la siguiente documentacion se podra instalar el Core de Amero y ser parte de la red blockchain.
+-  Con la siguiente documentacion se podra instalar Amero Core y ser parte de la red blockchain.
 
 ![](https://avatars2.githubusercontent.com/u/60229353?s=100&u=b9b3bdc2c70b0d5b6e99ddc63dcb73b3613e20f2&v=4)
 
@@ -24,7 +24,7 @@
 Puerto TCP/UDP Main Net: 59706 
 Puerto TCP/UDP Test Net: 59707
 
-### Preparacion del Entorno
+### Prepara El Entorno
 
 -  Actualizar en sistema operativo
 
@@ -37,7 +37,7 @@ Puerto TCP/UDP Test Net: 59707
 `sudo apt-get install git`
 
 
-### Descargar Paqueteria
+### Descargar Amero Core
 
 `sudo cd /var`
 
@@ -47,7 +47,7 @@ Puerto TCP/UDP Test Net: 59707
 
 `sudo git clone https://github.com/amero-crypto/core.git`
 
-### Configuracion
+### Configuración
 
 -  Acceder a folder con file de config.txt
 
@@ -74,14 +74,14 @@ Puerto TCP/UDP Test Net: 59707
     
 #### Referencia de Parametros
 
-- API_KEY : Se aulitiza para limitar los acceso y peticiones a la API , String sugerido 50 caracteres
-- MINE_WALLET : Direccion Wallet para las Rewards de la minera
-- IP_ADDRESS : Ingresar la Direccion IP Publica del Equipo Donde esta instalado el Core
+- API_KEY : Se utiliza para limitar los accesos y peticiones a la API , String sugerido 50 caracteres
+- MINE_WALLET : Dirección Wallet para las Rewards de la minera
+- IP_ADDRESS : Ingresar la Dirección IP Publica del Equipo Donde está instalado el Core
 - API_ENABLED : Permite Apagar/Prender las peticiones API al Nodo
-- NETWORK_MODE : Modo de operacion del nodo : 1 = Main Net , 2 = Test Net
+- NETWORK_MODE : Modo de operación del nodo : 1 = Main Net , 2 = Test Net
 - SAVE_BIN_DATA: Modo de almacenamiento : 1 = Bin File, 2 = Txt File
-- MINING_ENABLED: Permite la Mineria Directa en el nodo (no recomendado)
-- SSL_ENABLED: Habilitar la comunicacion segura SSL (Main Net requiere SSL)
+- MINING_ENABLED: Permite la Minería Directa en el nodo (no recomendado)
+- SSL_ENABLED: Habilitar la comunicación segura SSL (Main Net requiere SSL)
 
 #### -
 
@@ -113,7 +113,7 @@ Puerto TCP/UDP Test Net: 59707
 
 #### Deamon
 
-Utilizaremos PM2 para mantener Amero core funcionando en  Backgroud 
+Utilizaremos PM2 para mantener Amero Cose funcionando en Backgroud 
 
 - Instalar PM2 (Requisito NODEJS)
 
@@ -142,3 +142,28 @@ Utilizaremos PM2 para mantener Amero core funcionando en  Backgroud
 - Ver Log de Amero Core
 
 `pm2 logs`
+
+# Post Instalación
+
+#### Peers
+
+Tras unos segundos después de iniciar, Amero Core solicitara a los Peers Semilla compartan la lista actualizada de los Peers adjuntos, y a su vez los Peer Semilla propagaran la dirección de nodo recién instalado a toda la red  de Amero.
+
+Amero Core realizada un Test a cada unos de los peers agregados, este test descartara los peers que esten fuera de línea dejándolos en un Grey List hasta que el peer en cuestión realice su sincronización con la red de Amero.
+
+#### Blockchain
+
+Al iniciar Amero Core este deberá estar sincronizado con el nodo semilla y permanecer en IDLE hasta que reciba su primer bloque listo para ser confirmado, Amero Core realizara su Validación, resultado a la validación y a que el Nodo de Amero Core no se encuentra Actualizado con la última copia de la blockchain se procede al consenso con los Peers Adjuntos, El nodo de Amero Core solicitará a los Peers adjuntos que compartan su Altura y CheckSum de su copia de Blockchain, Dependiendo de los datos obtenidos el nodo de Amero Core Sincronizara con los Peers con mayor altura y mayor indice de Checksum, una vez sincronizado el Amero Core desbloqueara todas las utilidades de su API.
+
+#### API
+
+Referencias en : [API v3.3.0](https://amero.lat/docs/api/3.3.0/apidoc.html "API v3.3.0")
+
+#### Comunidad de Desarrolladores
+
+LINK :  [DEVS](http://amero.com.mx/community/index.php "DEVS")
+
+
+#### Links
+Amero Web Site:  [Amero](http://www.amero.lat"Amero")
+Amero Soporte:  [Amero Soporte](http://www.amero.lat/soporte"Amero Soporte")
