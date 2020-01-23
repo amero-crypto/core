@@ -100,7 +100,7 @@ Puerto TCP/UDP Test Net: 59707
 
 - Si la Instalacion de Amero Core fue exitosa debera ver la siguiente pantalla
 
-![](https://amero.lat/assets/images/git/example-node.png)
+![](https://amero.lat/assets/images/git/example-node-3.png)
 
 - Salir de  ./amero
 
