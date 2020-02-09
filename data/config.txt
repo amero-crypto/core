@@ -1,0 +1,10 @@
+{
+    "API_KEY"           :   "INGRESE API KEY",
+    "MINE_WALLET"       :   "",
+    "IP_ADDRESS"        :   "IP PUBLICA DEL NODO",
+    "API_ENABLED"       :   1,
+    "NETWORK_MODE"      :   1,
+    "SAVE_BIN_DATA"     :   1,
+    "MINING_ENABLED"    :   0,
+    "SSL_ENABLED"	:   1
+}
