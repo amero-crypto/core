@@ -113,7 +113,11 @@ Puerto TCP/UDP Test Net: 59707
 
 #### Deamon
 
-Utilizaremos PM2 para mantener Amero Cose funcionando en Backgroud 
+Utilizaremos PM2 para mantener Amero Core funcionando en Backgroud 
+
+- Instalar NPM
+
+`apt install npm`
 
 - Instalar PM2 (Requisito NODEJS)
 
